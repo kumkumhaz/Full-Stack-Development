@@ -1,0 +1,10 @@
+let nv = document.body.firstElementChild.firstElementChild;
+console.log(nv)
+console.log(nv.rows)
+console.log(nv.rows[0].cellIndex)
+console.log(nv.caption)
+console.log(nv.tHead)
+console.log(nv.tHead.firstElementChild)
+console.log(nv.tHead.firstElementChild.firstElementChild)
+console.log(nv.tBodies)
+console.log(nv.tFoot)

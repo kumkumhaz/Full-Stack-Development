@@ -1,0 +1,158 @@
+///Walking to DOM
+DOM (Document object Model)
+ > DOM tree referes to the HTML page where all the nodes are objects.
+  -There can be 3 main types of nodes in the DOM tree
+  I. Text nodes
+  II. Element nodes 
+  III. Comment nodes
+
+  DOM tree
+                        HTML.
+                       /     \  
+                   head       Body
+                  /    \         \
+               Link    Script      Div
+                                  /   \
+                               form    from
+                               /
+                            input
+
+  In an HTML page , <html> is at the root and <head> and <body> are its children, etc.
+  A text node is always a leaf of the tree.
+     
+     <html>
+        <head>
+        </head>
+        <body>
+        </body>
+     </html>
+
+AUTO CORRECTION :-
+If an erroreous Html is encountered by the browser, it tends to correct it . for example, if we put something after the body , it is automaticallt moved inside the body . 
+Another example is <table> tag which must contain <tbody>
+
+WALKING THE DOM:-
+     
+     <html>  -document.documentElement
+        <head>     -document.head
+           <title>
+           </title>
+           <span>
+           </span>
+        </head>
+        <body>     - document.body
+        </body>
+     </html>
+
+     typeof document.documentElement
+     => Object
+     typeof document.title
+     => String
+Note ; Document.body can sometimes be null if the javascript is written before the body tag.
+     <html>
+        <head>
+        </head>
+              <title>
+              </title>
+              <span>
+              </span>
+        <body>
+        </body>
+     </html>
+> invalid syntax and will return null
+
+CHILDREN OF AN ELEMENT:-
+  Direct as well as deeply nested elements of an element are called its children.
+
+  Child nodes-> Elements that are direct children for example head & body are children of <html>
+  Descendant nodes -> All nested elements, children, their children and so on...
+                      ex; head , children of head(meta,tile ,link etc),body, Children of of(div, Children of div ,siblings of div.., etc) all are the Descendant node
+  
+   FirstChild, LastCHild & Childnodes
+   element.firstChild -> first child element
+   element.lastChild -> last child element
+   element.childNodes -> all child nodes
+
+   following is always true:
+   elem.childNodes[0] === elem.firstChild
+   elem.childNodes[elem.childNodes.length-1] === elem.lastChild
+
+ There is also a method elem.hasChildreNodes() to check whether there are any child nodes.
+
+ Note:- childNodes looks like an array but its not actually an array but a collection .
+        We can use Array.from(collection) to Convert it into an Array ----> Array methods wpon't work
+
+
+DOM COLLECTION:-
+  > They are read-only
+  > They are live elem.childNodes variable(reference) will automatically update if Childnodes of elem is changed.
+  > they are iterable using for... of .. loop
+
+SIBLINGS AND PARENT :-
+ siblings are nodes that are childre of the some PARENT
+ > for example : < head> and <body> are siblings.
+                siblings have same parent ,as in the above example its html. 
+
+ > <body> is said to be the "next" or "right" sibling of <head>, <head> is said to be the previous or "left" sibling of ,body>.
+ > The next sibling is in nextSibling property , and the previous one in previousSibling.
+  the parent is available as parentNode
+     alert(document.documentElement.parentNode); // document
+     alert(document.documentElement.parentElement); // null
+     
+ELEMENT ONLY NAVIGATION
+Sometimes we don't want text or comment nodes. Some links only take Element nodes into Account.
+For example:-
+  document.previousElementsSibling ->previous sibling which is an element
+  document.nextElementsSibling -> next siling(element)
+  document.firstChild -> first element child
+  document.lastElementChild -> last Element child
+
+TABLE Link
+
+Certain DOM elementsmay provide additional properties specific to thier type for convenience
+  Table element suppors the following properties
+  . table.rows -> collection of tr elements
+  . table.caption -> reference to <caption>
+  . table.tHead -> reference to <tHead>
+  . table.tFoot -> reference to <tFoot>
+  . table.tBodies -> collection of <tFoot>
+  . table.rows -> collection of <tr> inside
+
+  . tr.cells -> collection of td and th
+  . tr.sectionRowIndex -> index of tr inside ending element
+  . tr.rowIndex -> no. of cells inside enclosing <tr>
+
+QUICK QUIZ:  Print typepof document and typeof window in the console & see what it prints.
+    typeof document => object
+    typeof window => object
+
+SEARCHING IN DOM:-
+  DOM navigation properties are helpful when the elements are close to each other. 
+  If they are not close to each other, we have some more methods to search the DOM.
+ -> document.getElementById
+    this method is used to get the element with a given "id" attribute.
+        let span = document.getElementById('span')
+        span.style.color = "red"
+
+ -> document.querySelectorAll
+    returns all elements inside an element matching the given css selector.
+
+ -> document.querySelectorAll
+    Returns the first element for the given CSS selector.
+    A efficient with the given tag name.
+
+ -> document.getElementsByTagName
+    Returns elements with the given tag Name.
+   
+ -> document.getElementsByClassName
+    Returns elements that have the given CSS class.(Don't forget the "s" letter.)
+
+ -> document.getElementsByTagName
+    Searches elements by the name attribute.
+   
+MATCHES, CLOSEST & CONTAINS methods
+    There are three important methods to search the DOM 
+
+    I elem.matches(CSS) -> To check if element matches the given CSS selector.
+    II elem.closest(CSS) -> To look for the nearest ancestor that matches the given CDSS - selector . The elem itself as also checked.
+    III elemA.contains(elem) -> Returns true if elemB is inside elemA(a descendant of elemA) or when elemA == elemB.

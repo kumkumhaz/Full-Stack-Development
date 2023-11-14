@@ -1,0 +1,59 @@
+Raw Form Of SignUp Form
+ 
+
+HTML only runs in client side  
+
+FirstName
+LastName
+Email
+Password
+DOB
+Mobile
+Gender
+AddressLine
+City
+Pincode
+T&C
+Submit Button
+
+ELEMENTS => element starts from opening tag and ends at closing tag. Element is nothing but opening, closing tags and every thing between them
+         => tags + ttributes + Inner Content
+         
+
+
+    Most commonly used tags
+    list - I. Ordered list => create a list using numbering (1,2,3,4,5,6)
+         - II. Unordered list => create a list without numbers(. . . . . . )
+    Anchor tages
+    Paragraph
+    Div  -  it creates division in the page , which works like a container
+            to put more element together in one setion.
+         -  groups the element together
+    span - same like div , from the functionallity purpose there is no difference 
+    img  -  img tag- src - source of image , alt ; alternate text. a self closig tag
+    table
+
+
+****div vs span.
+    => both are containers to group element together  
+
+****2 type of elements.
+    - Block-level element
+      . occupies entire line in which they are put.
+      . eg; div
+    - inlline element
+      . occupies space as much as it needs for the content . It won't occupies any unneccessary space.
+      . eg; span , Anchor
+
+
+
+Table
+thead
+tr
+th
+td
+tbody
+tfoot
+colgroup
+col
+colspan, span => which is bassically to cover the area, how much area a particular column is going to cover

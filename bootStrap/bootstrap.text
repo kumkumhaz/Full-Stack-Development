@@ -1,0 +1,13 @@
+Bootstrap => it is a css library.
+           => provides prebuilt classes.
+           => free to us, created by twitter, open source.
+           => It is most popular HTML, CSS and javascript framework for developing responsive and mobile-friendly websites
+
+1. Install bootstrap in our application.
+
+
+
+CDN =>  Content delivery network
+
+Bootstrap grid.
+=> Divide entire page in 12 columns.

@@ -1,0 +1,46 @@
+.object{
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    border: 1px solid black;
+    position: fixed;
+    animation-name: moveToRight;
+    animation-duration: 5s;
+    animation-iteration-count:initial;
+    /* top: 0;
+    left: 0; */
+  
+}
+/* Keyframes => it defines how you want to move the objects */
+@keyframes moveToRight{
+    0% { top: 0; left: 0;}
+    1% { top: 0; left: 10px;}
+    2% { top: 0; left: 20px;}
+    3% { top: 0; left: 30px;}
+    4% { top: 0; left: 40px;}
+    5% { top: 0; left: 50px;}
+    6% { top: 0; left: 60px;}
+    7% { top: 0; left: 70px;}
+    8% { top: 0; left: 80px;}
+    9% { top: 0; left: 90px;}
+    10% { top: 0; left: 100px;}
+    15% {background-color: aqua; top: 100px; left: 100px; border-radius: 50px;}
+    20% { background-color: beige; top: 100px; left: 200px;}
+    25% { top: 0 ; left: 200px; bottom: 100px}
+    30% { top: 0; left: 300px;}
+    35% {background-color: brown; top: 100px; left: 300px;}
+    40% { background-color: bisque; top: 100px; left: 400px; }
+    45% { top: 0; left: 400px; bottom: 100px;}
+    50% { top: 0; left: 500px;}
+    55% {background-color: black; top: 100px; left: 500px;}
+    60% {background-color: blanchedalmond; top: 100px; left: 600px; }
+    65% { top: 0; left: 600px; bottom: 100px;}
+    70% { top: 0; left: 700px;}
+    75% {background-color: rgb(55, 7, 100); top: 100px; left: 700px;}
+    80% { background-color: rgb(246, 87, 87); top: 100px; left: 800px; }
+    85% { top: 0; left: 800px;bottom: 100px;}
+    90% { top: 0; left: 900px;}
+    95% {background-color: rgb(252, 12, 12); top: 100px; left: 900px;}
+    100% {background-color: blue; top: 100px; left: 100px;}
+
+}

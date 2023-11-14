@@ -1,0 +1,5 @@
+1. Write a program to show different alerts when different buttons are clicked.
+2. Create a website which is capable of storing bookmarks of your favorite website using href.
+3. Repeat Q2 using event listeners.
+4. Write a javascript programm to keep fetching contents of a website(Evert 5 second).
+5. Create a glowing bulb effect using classList toggle method in javascript.

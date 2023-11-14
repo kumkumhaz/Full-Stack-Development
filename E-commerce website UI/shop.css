@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+.top_Header{
+    background-color: rgb(9, 126, 251);
+    height: 45px;
+    display: flex;
+}
+.header_left{
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    width: 40%;  
+ }
+ .icon_cover{
+    margin-top: 1px;
+ }
+.companyName{
+    color: yellow;
+    font-size: large;
+    font-weight: 500;
+    font-style: oblique;
+    padding-bottom: 3px;
+    padding-top: 6px;
+}
+.tag{
+    padding-bottom: 4px;
+    color:lightgray;
+    font-size: xx-small; 
+}
+.tag_line{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header_right{
+    padding: 5px;
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+.btn-editor{
+    height: 34px;
+    padding: 5px;
+    border: 0;
+    margin-right: 6px;
+    background-color:  rgb(9, 126, 251);
+    font-size: small;
+    font-weight: 480;
+    color: white;    
+}
+.btn-editor span{
+    font-size: xx-small;
+    color: yellow;
+    font-style: italic;
+}
+
+.start{
+    font-size: large;
+}
+.cover{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom,rgb(12, 11, 12), rgb(53, 165, 203));;
+}
+.sale{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(203, 251, 11);
+    font-style: italic ;
+}
+.cover_text{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(244, 243, 245);
+}
+
+.card-body{
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 40px;
+}
+.footer{
+    height: 25px;
+    background-color:rgb(74, 74, 76);
+    position: fixed;
+    width: 100%;
+    color: rgb(244, 245, 246);
+    text-align: center;
+    bottom: 0;
+    font-size: small;
+}
+

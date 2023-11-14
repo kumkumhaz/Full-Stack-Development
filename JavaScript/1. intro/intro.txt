@@ -1,0 +1,15 @@
+WHAT IS PROGRAMMING? 
+> Programming is a way to talk to computers.
+> A language like Hindi, English, French etc. Can be used to talk to a human but computer is a dumb machine so for computers we need Straight forword instruction.
+> Programming is the act of contructions a program , a set of precise instructions telling a computer what to do.
+
+WHAT IS ECMASCRIPT?
+  > ECMAScript is a standard on which javascript is based.
+  > It was created to ensure that different documents on javascript are actually talking about the same language.
+  > Javascript & ECMAScript can almost always be used interchangably .Javascript is very liberal in what it allows. 
+
+HOW TO EXECUTE JAVASCRIPT?
+  - In browsers
+  - In runtime(NodeJS)
+  - In HTML documents using <script> tag
+  - Replit(can be used in phone also)

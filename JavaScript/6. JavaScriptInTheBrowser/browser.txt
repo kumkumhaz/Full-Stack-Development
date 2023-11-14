@@ -1,0 +1,90 @@
+ JAVASCRIPT IN THE BROWSER
+
+Javascript was initially created to make web pages alive. 
+JS can be written right in a web page's HTML to make it interactive.
+
+The browsers has an embedded engine called the javascript engine on the javascript runtime.
+
+Javascript's ability in the browser is very limited to protect the user's saftey.
+For example a webpage on http://gogle.com can not access http://amazon.com and steal information from there.
+
+DEVELOPER TOOLS
+  Every browser has some developers tools which makes a developer's life a lot easier.
+  F12 on chrome opens dev tools
+
+  ______________________________
+  |elements | Console | Network |
+  |_________|_________|_________|
+        |          |         |
+    all HTML       |         |
+     elements      |         |
+                   |         |
+                 All the     |
+             errors + logs   |
+                             |
+                       All network 
+                         request
+
+  We can also write javascript commands in  the console.
+
+THE SCRIPT tag
+   The script tag is used to insert javascript into an HTML page.
+   The script tag can be used to insert external or intenal scripts.
+   <script>
+   alert("hello")
+   </script>
+   // or...
+   <Script src ="/js/this.onr.js"></script>
+
+ The benefit of a separate javascript file is that the browser will document it and store it in its cache.
+ Advantages of using separate script file using src attributes of script tag
+    // 1 Separation of concerns
+    // 2 Browser caching
+
+ CONSOLE OBJECT METHODS
+ The console object has several methods ,log being one of them. Some of them are as follows:
+
+  assert() -> used to assert a condition
+  clear() -> clears the console
+  log() -> outputs a message to the console
+  table() -> displays a tabular data
+  warn() -> used for warning
+  error() -> used for errors
+  info() -> used for special information
+
+
+  ALERT , PROMPT AND CONFIRM
+
+ALERT :- used to invoke a mini window with a msg 
+           alert("hello);
+
+PROMPT :- Used to take user input as string
+         inp = prompt("hi" , "no")
+                              |
+                              |---> Optional default value
+
+Confirm :- Shows a message and waits  for the user to press ok or cancel. returns true for ok and false for cancel.
+ The exact location and lok is determined by the browser which is a limitation.
+
+WINDOW OBJECT BOM & DOM :-
+ We have the following when javascript runs in a browser.
+
+                    window                       
+                   /   |  \
+                  /    |   \
+                DOM    BOM   JavaScript Core
+
+  Window object represents browser window and provides methods to control it.
+  It is a global object.
+
+Document Object Model(DOM):-
+ > javascript object of HTML page is called DOM.
+  Dom represents the page content as HTML
+   document.body --> Page body as JS object
+   document.body.style.background = "green"; --> Change background to green
+
+Browser Object Model(MOD) :-
+ The browser object Model(BOM) represents additional objects provided by the browser(host environment) for working with everything except the document.
+ The function alert/Confirm/prompt are also a part of the BOM.
+    location.href = "https://amazon.com" --> redirect to another URL
+    

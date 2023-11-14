@@ -1,0 +1,105 @@
+<!-- Every html files satrts with html tags and end with html tags-->
+<html>
+    <head>
+        <link rel="stylesheet" href="SignUp.css">
+    </head>
+<!-- body tags  includes your visible part of web page -->
+    <body>
+        <!-- <img src="https://th.bing.com/th/id/OIP.hGaetDAQWapgIJbIOhPhXwHaHa?pid=ImgDet&rs=1" alt="FaceBook"> -->
+        <!-- heading tags -> there are 6 different heading tags hi(largest), h2, h3, h4, h5, h6(smallest)  -->
+        <!-- here we are using Inline CSS -->
+        <h1> Please Sign Up</h1>  
+        <h5 class="bg-green">It's quick and easy.</h5>
+        <!-- Create form and controls inside form-->
+        <!-- Form tags is a container which contains form controls -->
+        <form>
+            <!-- for input tag type inp -> select input Option -> press tab button . this is self closing tag-->
+            <!-- attribute => [name = "value"] , we are giving instruction to the browser that we need input of type text -->
+            <label for = "fname">Enter First Name*</label>
+            <input type="text" name = "fname" placeholder="Your First Name"/>
+            <br>
+            <br>
+            <label for = "lname">Enter Last Name*</label>
+            <input type="text" name = "lname" placeholder="Your Last Name"/>
+            <br/>
+            <br/>
+            <label for = "email">Enter Email* <Email></Email></label>
+            <input type="text" name = "email" placeholder="Your Email"/>
+            <br/>
+            <br/>
+            <label for = "password">Enter Password*</label>
+            <input type="text" name = "password" placeholder="password"/>
+            <br>
+            <br>
+            <label for = "mobile" >Enter Phone Number(optional)</label>
+            <input type="number" placeholder="Country Code"><input type="number" name =" mobile" placeholder="Your Phone Number">
+            <br/>
+            <br/>
+            <label for = "dob">Enter Date Of Birth*</label>
+            <!-- <input type="date" name = "dob" placeholder="Your DOB"/> -->
+            <input type="datetime" placeholder="day"><input type="datetime" placeholder="month"> <input type="datetime" placeholder="year"> 
+            <br>
+            <br>
+            <label for = "gender">Select Gender*</label>
+            <input type="radio" name = "gender" ><label for = "" > Male</label>
+            <input type="radio" name = "gender" ><label for = "" >Female</label>
+            <input type="radio" name = "gender" ><label for = "" > Other</label>
+            <br>
+            <br>
+            <label for="age">Select Age*</label>
+            <select name="age">
+                <option value="0">Select</option>
+                <option value="0">Under 10</option>
+                <option value="0">11-19</option>
+                <option value="0">20-30</option>
+                <option value="0">Above 30</option>
+            </select>
+            <br/>
+            <br/>
+            <label for = "address">Enter AddressLine*</label>
+            <!-- <input type="text" name = "address" placeholder="Your Address"> -->
+            <!-- TextArea : MultiLine Text -->
+            <br>
+            <textarea name="address" cols="" placeholder="Your Address" rows="" ></textarea>
+            <br/>
+            <br/>
+            <label for = "city" > Select your City*</label>
+            <select name="city" id="">
+                <option value="1"> Select</option>
+                <option value="2"> Banglore</option>
+                <option value="3"> Delhi</option>
+                <option value="4"> Gurgaon</option>
+                <option value="6"> Hazaribag</option>
+                <option value="7"> Hyderabad</option>
+                <option value="8"> Kanpur</option>
+                <option value="9"> Kolkata</option>
+                <option value="10"> Mumbai</option>
+                <option value="11"> New Delhi</option>
+                <option value="12"> Patana</option>
+                <option value="13"> Lucknow</option>
+                <option value="14"> Nagpur</option>
+                <option value="15"> Gurugram</option>
+                <option value="16"> Bokaro</option>
+                <option value="17"> Jamshedpur</option>
+            </select>
+            <br/>
+            <br/>
+            <label for ="pincode"> Enter PinCode*</label>
+            <input type="text" name ="pincode" placeholder="Your PinCode">
+            <br>
+            <br>
+            <input type="checkbox" name="t&c">
+            <label for="t&c"> Terms & Conditions</label>
+            <br>
+            <br>
+            <!-- Buttons -->
+            <input type="reset" value = "Clear">
+            <br>
+            <br>
+            <input type="button" value ="Sign Up" >
+            <button type = "Log In"> Log In</button>
+        </form>
+         
+    </body>
+      
+</html>

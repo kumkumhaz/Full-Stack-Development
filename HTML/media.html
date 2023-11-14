@@ -1,0 +1,32 @@
+<!--  1.Media elements (audio, video, img,link)  -->
+<!--  2.Media attributes(link,img,anchor)-->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <a media="print and (resolution:300dpi)" href="google.com">go to google</a>
+
+
+        <!-- How to create audio player in html -->
+        <audio controls>
+            <source type="audio/mp3" src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3">
+        </audio>
+        <!-- controls is  bollean attributes - default value is true -->
+        <!-- media provides specification and details about how render media on browser -->
+        
+        <video controls media="print and (resolution:300dpi)">
+            <source 
+            src="https://firebasestorage.googleapis.com/v0/b/native-collegebeats.appspot.com/o/Youtube%20Clone%20DevTube.mp4?alt=media&token=937cc342-1d06-4b91-acf2-19a30fa7226d"
+            type = "video/mp4">
+        </video>
+        <!-- iframes are not safe unless you trust them. -->
+        <iframe width="912" height="513"
+         src="https://www.youtube.com/embed/EXRw4x2bz4I"
+         title="#6 - DS & Algorithms Course | Divide & Conquerer Technique | Binary Search | Aao_Sikhe_Javascript 🔥" 
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen></width=>></iframe>
+    </body>
+</html>

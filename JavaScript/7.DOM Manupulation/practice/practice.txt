@@ -1,0 +1,12 @@
+1. Create a navbar and change the color of its first element to red.
+2. Create a table without tbody ,now use "view page source" button to check whether it has a tbody or not.
+   => no
+3. Create an element with 3 children. Now change the color of first and last element to green.
+4. Write a javascript code to change background of all <li> tags to cyan.
+5. Which of the following is used to look for the farthest ancestor that mathes  given css selector.
+   I. matches  II. closest  III. contains   IV. none of these
+   => IV. none of these
+
+Q2
+Element.innerHTML is used to populate a div with HTML search online about this method and create a website with a div tag can bring a random joke gives an array of jokes Use Math.random and fetch jokes from the internet (us any website to creatre the array)
+Your website should show a random joke on every reload. Mix length of your jokes array should be 10.

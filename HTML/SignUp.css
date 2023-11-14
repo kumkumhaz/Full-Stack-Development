@@ -1,0 +1,31 @@
+
+input{
+    height: 25px;      
+  }
+  /* creating a class selector which gives flexibility*/
+  /* .(dot) is prefix for class selector */
+  .bg-green{
+      background-color: rgb(31, 250, 49);
+  }
+  *{
+    font-size: 15px;
+  }
+button{
+    background-color: rgb(87, 139, 251);
+}
+img{
+    /* box model => representation of element having 4 different component/parts  - content, border,paddig,margin */
+    /* width style color */
+    border: 5px solid darkgreen ;
+    /* rounded corner */
+    border-radius: 10px;
+    /* padding => the space between our content and border of an element box model    */
+    padding: 40px; /* equal padding in all directions*/
+     /* top, right, bottom ,left */
+     padding: 40px 10px 20px 30px;
+     /* margin => the space occupied by our element outside it's border */
+     margin: 50px;  /* equal margin in all directions*/
+     /* top, right, bottom ,left */
+     margin: 10px 10px 20px 30px;
+
+}

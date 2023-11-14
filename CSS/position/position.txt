@@ -1,0 +1,17 @@
+
+1 . position.
+I Static -> Static /Default
+Default => the way elements are added in the code is the way they will appear on page.
+Default Position is known as Static Position.
+
+ position attribute does not work alone, it need 4 more properties and they are-
+ -top
+ -bottom
+ -right
+ -left
+ we can only use these 4 properties when the postion is non-static/default position.
+
+II Relative/non-static-> Relative, Absolute , fixed
+ -relative
+ -fixed
+ -absolute

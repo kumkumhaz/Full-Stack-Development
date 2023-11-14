@@ -1,0 +1,113 @@
+*{
+    background-color: rgb(217, 241, 249);
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  input{    
+      height: 25px;
+      border: 1px solid rgb(134, 152, 158); 
+      margin: 2px;
+      padding-left: 5px; 
+      display: inline;
+      width: 100%;
+     
+    }
+    label{
+      padding-right: 5px;
+      display: block;
+       }  
+  h1{
+    background-color: rgb(70, 110, 184);
+    color: white;
+  }
+  h2{
+    font-size: xx-large;
+    padding-top: 10px;    
+  }
+  h5{
+  padding: 5px 10px 10px 15px;  
+  color: rgb(105, 98, 98);
+  }
+  .labelradio{
+    display: inline;
+    margin: 0;
+    width: max-content; 
+    margin-right: 20px;
+  }
+  .inputRadio{
+    display: inline;
+    width: max-content;
+    margin: 0;
+    height: max-content;
+  }
+  .input-chechbox{
+    display: inline;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 12px;
+  }
+  .tc-checkbook{
+    display: inline;
+    margin-top: 12px;
+    width: max-content;
+  }
+  textarea{
+    width: 100%;
+    margin: 0;
+    height: 25px;
+    display: block;
+    padding-left: 5px;
+  
+  }
+  .label-textarea{
+  display: block;
+  margin: 0;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  
+  }
+  select{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    
+    border: 1px solid rgb(134, 152, 158);
+  }
+  .left{
+    /*  percent is relative to its parent */
+    width: 30%;  
+  }
+  .right{
+    width: 50%;
+  }
+
+  .container{
+    display: flex;
+   padding: 0;
+   margin: 2%;
+  }
+  img{
+    width: 70%;
+  }
+/* we want to apply this CSS only when screen size is less than 501px(break point  )  */
+@media only screen and (max-width: 500px ){
+  .container{
+    display: block;
+  } 
+  .left{
+    width: 100%;
+    height: 130px;
+    text-align: center; 
+   } 
+   img{
+     width: 50%;
+    }
+    .right{
+      width: 85%;
+      margin: auto;
+    }
+  
+}
+/* CSS at the end of the file will have greater priority than what is on top. So always have thd media Quiry at tha last of th css */

@@ -1,0 +1,157 @@
+cHAPTER 8 - EVENTS & OTHER DOM PROPERTIES
+             INNER HTML
+CONSOLE DIR PROPERTIES:-
+   > Console.log shows the element DOM tree.
+   > Console.dir shows the element as an object with it's proprties.
+
+TAGNAME/NODENAME:-
+   > Used to read tag name of an element
+     - tagname -> only exist for element nodes
+     - nodeName -> defined for only node(text, comment etc)
+
+INNERHTML AND OUTERHTML
+   > The innerHTML property allows to get the HTML inside the element as a string(valid for element node only).
+   > The outerHTML property contains the the full HTML, innerHTML + the element itself.
+   > innerHTML is valid only for element nodes. For other node types we can use nodeValue or data.
+            first.innerHTML                         // get innerHTML
+            first.innerHTML="<span>KUMKUM<span>"    // change innerHTML
+
+TEXT CONTENT:  
+   PRovides access to the text inside the element: only text, minus all tags
+
+HIDDEN PROPRTY: 
+  thE HIDDEN ATTRIBUTE AND THE DOM PROPRERTY SPEcifies whether the element is visible or not.
+    <div hidden> I am hidden</>
+    <div id = "element"> I can be hidden </div>
+    <Script>
+    element.hidden = true;
+    </>
+
+ATTRIBUTE METHODS:
+   Attribute => [name = "value"], this is built-in class in HTML, with name and value properties.
+   we used to give instruction to the browser that we need input of type text(the value is always a string).
+   - elem.hasAttribute(name) -> Method to check for existence of an ATTRIBUTE
+   - elem.getAttribute(name) -> Method used to get the value of an attribute.
+   - elem.setattribute(name,value) -> Method used to set the value of an attribute.
+   - elem.removeAttribute(name) -> method to remove the attribute from elem.
+   - elem.attributes -> Method to get the collection of all attributes.
+
+DATA-* attributes:
+   we can always create custom attributes but the ones starting with "data-" are reserved for programmers use. They are available in a property named dataset.
+   If an element has an attribute named "data-one", it's availavle as element.dataset.one.
+
+INSERTION METHOD:
+   We looked at some ways to insert element in the DOM . Here is another way:
+       let div = documet.createElement('div) // create
+       div.className = "alert" // Set class
+       div.innerHTML - "<span>hello</span>
+       documet.body.append(div)
+       Here are some more insertion method:-
+        - node.append(e)-> append at the end of node
+        - node.prepend(e) -> insert at the beginning of node
+        - node.before(e) -> insert before node
+        - node.after(e) -> insert after node
+        - node.replaceWith(e) -> replace node with the given node.
+
+  Quick quiz : Try out all these methods with your own webpage. 
+
+
+INSERT ADJACENT HTML / TEXT / ELEMENT:
+   This method is used to insert HTML. 
+   > The first parameter is a code word , specifying where to insert. Must be one of the following;
+     - "beforebegin" - insert HTML immediately before element.
+     - "afterbegin" - Insert HTML into element at the beginning.
+     - "beforeend" - Insert HTML into element at the end.
+     - "afterend" - Insert HTML immediately after element.
+   > The second parameter is an HTML string 
+     ex;
+     <div id = "div"></div>
+     <sript>
+       div.isertAdjacentHTML('beforebegin',<p> Hello </p>');
+       div.insertAdjacentHTML('afterend', <p>Bye</>');
+       </Script>
+
+       The output would be:
+       <p> Hello </>
+       <div id = "div"> </div>
+       <p> Bye </p>
+
+NODE REMOVAL:
+  To remove a node , ther's a method node.remove()
+   let id1 = document.getElementByid("id1")
+   id1.remove()
+
+   CLASSNAME AND CLASSLIST:
+     classList -> Method
+     className -> Attribute
+     If we assign somethig to elem.className, it replaces the whole string of classes.
+     Often we want to add/remove toggle a single class.
+       - elem.classList.add/remove("class") -  Adds/removes a class.
+       - elem.classList.toggle("class") - Adds the class if it doesn't exist, otherwise removes it.
+       - elem.classList.contains("class") - checks for the given class, returns true/false.
+
+
+
+SET TIMEOUT AND SETINTERVAL:
+ SetTimeout allows us to run a function once after the interval of time.
+ Syntax of SetTimeout is as follows:
+
+   let timerTd = setTimeout(function <delay>,<arg1>,<arg2>)
+         |                               |
+    returns a timer id                 in ms(milli second)
+
+  > ClearTimeout is used to cancel the execution(in case we change our mind). 
+     for ex:
+            let timerId = setTmieout ( () => alert("never"), 1000);
+         ClearTimedout(timerId)
+                         |
+                         |--->cancel the execution
+  
+  > SetInterval method has a similar syntax as SetTimeout:
+    
+    let timerId = SetInterval(function,<delay>, <arg1>,<arg2>)
+   
+  All arguments have the same meaning, But unlike SetTimeout, it runs the function not only once, but regularly after the given interval of time.
+   > to stop further calls, we can use clearInterval (timerId)
+
+
+   /////////////////////////////////////////////////////////
+           BROWSER EVENT:
+   > An event is a signal that something has happend.
+      all the DOM nodes generate such signals.
+      Some important DOM events are:
+      - Mouse events : click, contextmenu(right click), mouseover/ moseout, mousedown/mouseup, mousemove
+        . onclick
+        . onmouseenter
+        . 
+      - Keyboard events : keydown and keyup
+      - form element events : submit , focus etc.
+      Document events : DOM ContentLoaded
+   
+           HANDLING EVENTS:
+   > Events can be handled through HTML attributes
+     <input value = "Hey" onclick = "alert('hey') type = "button">
+                                     <----------->
+                                           |---> can be another JS function
+         Events can also be handled through the onclick property
+          elem.onclick = function(){
+            alert("yes")
+          };
+   NOTE:- Adding a handled with JavaScript over writes the existing handler.
+
+ ADD EVENTLISTNER AND REMOVE EVENTLISTNER:
+   > addEventListner is used to assign multiple handlers to an event.
+      - element.addEventListner(event, handler)
+      - element.removeEventListner(event,handler)
+                             |
+                             |---> handler must be the same function object for this to work
+
+THE EVENT OBJECT:
+  When an event happens , the browser creates an event object, puts details into it and passes it as an argument to the handler.
+  elem.onclick = function (event){
+   ......
+  }
+  event.type : Event types
+  event.currentTarget: Element that handled the event 
+  event.clientX/ event.clientY: coordinates of the cursor.
+

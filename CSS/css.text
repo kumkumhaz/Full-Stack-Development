@@ -1,0 +1,75 @@
+CSS.
+ 1. what is css?
+ cascading style sheets(CSS)
+   - Sheets which contains styles.
+   - Styling HTML pages.
+  > Cascaded => to fall, pour or rush in or as if in a Cascade(WaterFall)
+
+
+2. Why we need CSS?
+ - To improve presentation of page.
+ - To give it better look and feel.
+ - To improves UX - User Experience.
+
+3. How does CSS looks like?
+   [syntax] =>
+   PropertyName:valueForProperty;
+   eg: color:red;
+4. How to and where to write CSS?
+   Multiple ways(selector)to write CSS.
+    > selector => selector is used to select the elements that where  the css has to be applied.
+                . ID => "#"
+                . tag => h1, p, div, ...
+                . class => "." it is the most important selector. It is basically a group of selector which we want to apply to multiple elements but they don't belong to same tag.
+                . global => "*"
+
+   multiple place(location in the code)to write CSS.
+    - I. Inline CSS. => Writing CSS inside elements. (HTML and CSS both in same line)
+         > html has an attribute "style" which we use to write inline CSS(style used to write CSS but it belongs to HTML)
+         ** Always avoid writing inline CSS  because it mixes 2 responsibilities in 1 module which is against SRP(Single responsibility principle => a principle for software development)
+         ** single responsibility principle used by software developers to develop quality software which says one module should not handle two responsibilities  one module should have only single region to change.
+    - II. Internal CSS=> here we  write CSS in same file as html but not inside the element (but not inline).
+          > we write that css inside the head tag by using style tag(<style> </style>).
+          ** Internal CSS is also against the  SRP(single responsibility principle).
+      III. External CSS => Separate CSS file, the best way to write CSS.
+Priorities-
+I . Inline CSS
+II. Internal CSS
+
+ID > class > tag > global
+
+5. Flex Layout.
+6. Display
+7. Position
+8. Responsive Design
+9. Animations
+
+
+
+7. position.
+   I Static -> Static /Default
+     Default => the way elements are added in the code is the way they will appear on page.
+     Default Position is known as Static Position.
+
+     position attribute does not work alone, it need 4 more properties and they are-
+      -top
+      -bottom
+      -right
+      -left
+     we can only use these 4 properties when the postion is non-static/default position.
+
+   II Relative/non-static-> Relative, Absolute , fixed
+      -relative
+      -fixed
+      -absolute
+
+ 8. Responsive Designs.
+   I  Media Query => alternate css which we write for that sreen size.
+      -> BreakPoints => it is a technique which allows us to detect the movement in screen size.
+  II  CSS grid
+  III CSS flexbox
+  IV  External Frameworks eg: BootStrap, Thailwind CSS
+
+  An Obvious Solution.
+   - To write an alternative css for mobile device. - Media Query
+   - A technique to apply this css when screen is of mobile size. - BreakPoints(the pixcel points at which the css break and new css is applied)

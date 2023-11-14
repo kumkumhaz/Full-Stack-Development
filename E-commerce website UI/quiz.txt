@@ -1,0 +1,31 @@
+MCQs:
+1.Where can we conditionally render elements?
+   Backend
+   Database
+   User Interface
+   None of the above
+ Ans. c
+2.How to dynamically set button labels?
+   Through innerHTML
+   Via label tag
+   Button attribue
+   All of the above.
+ Ans a
+3.Why is document.createElement used for?
+   To manipulate DOM.
+   To beautify the web page. 
+   To create an HTML element node. 
+   None of the above.
+ Ans. c
+4.What is the term for creating multiple folders within folders?
+   Foldering.
+   Nesting.
+   Grouping. 
+   Organising.
+ Ans. b
+5.How to avoid nesting?
+   Flattening. 
+   Destructuring.
+   Restructuring.
+   None of the above.
+ Ans. a
