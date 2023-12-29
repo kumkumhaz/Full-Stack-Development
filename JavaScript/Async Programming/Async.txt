@@ -1,0 +1,175 @@
+
+Promises?
+Async-await.
+
+1. SYNCHRONOUS VS ASYNCHRONOUS Programming:-
+   Sync -  one at a time or syc is something which happens now
+   Async - not occuring at the same time or Async is something which happens later
+   I. SYNCHRONOUS Programming :-
+      > In synchronous programming code executed line by line, one thing execute at a time.
+      > In this, javascript engine waits for the code to get executed completely before moving to next line doesn't matter how much time it will take.
+      > it exexutes each line of code at a time in a sequence.
+ 
+   II. ASYNCHRONOUS Programming :-
+      > In this code gets executed without waiting for others code to get execute. 
+
+  why do we need ASYNCHRONOUS programming?
+   > it help us make our application more interactive, faster and to have a very user friendly experience.
+
+
+2. SINGLE-THREADING VS MULTI-THREADING Programming language :-
+   MULTIPROCESSING
+  * Processor - very similar to human brain, 
+               . we just think that we perform multiple task at a time but the reality is our mind doesn't perform multiple task at a time.
+               . we can't do two task with equal focus, it means our mind can't have two thoughts which can be equally proccessed / paralelly
+                 proccessed by our brain, doing the same is not posssible.
+   context switching - our human brain does it all the time .
+   capability of a processor can be devided into multiple threads and thode threads can be run paralelly to perform a task. 
+  * THREADING =>
+      > one part of processor
+      > single path of execution that a program uses to complete a particular task.
+      > Each task rurn in a sequential manner
+      > a task can only start if the execution of previous task is over. task 2 can't get executed until the execution of task 1 is over.
+   I. MULTI-TREADED Programming language :-
+      > any programming language who has capability to work with multiple threads, any programming who has libraries, who have got drivers
+        to create mupltiple threads are known as multiTheaded programming language.
+    
+   II.SINGLE THREADED Programming language :-
+      > any programming language which can work with one thread at a time is known as single Thtreaded programming language.
+*** JavaScript is a single Thtreaded programming language.
+
+
+3. HOW JS WORK?
+   > JS doesn't run independly, it runs with run-time environment
+   > RUN-TIME is basically the environment/ ecosystem which allow JavaScript(your language / code) to run in our machine / in our browsers.
+   > JS is only programming language which runs in client(browser) as well as in server(where the applicationis deployed) side.
+     . run-time environment for client side is browser 
+     . run-time environment for server side is Nodejs
+   >  JavaScript is not multiTheaded so it must be slower, but Because of NodeJS JavaScript is faster than other Programming language.
+   > NodeJS - Fastest engine for javascript 
+             . it uses V8 engine
+             . created by google in 2009
+             . google chrome also uses NodeJS.
+
+
+4. HOW NodeJS work? 
+   > how JS and NodeJS work together, to get the ans of this we need to Knowfirst about Event loop.
+   > NodeJS is asynchronous in nature , it has a collection of thresds which is called thread pool. whenever it requires, takes thread from pool and assign task to that thread. 
+
+
+5. WHAT IS EVENT LOOP?
+
+  >  Main thread(MT)- this is responsible for alocate or delocate tge memory of an application.
+                  - it receieve the request from client then perform accordingly.
+   
+  > TYPES OF request
+    - Access of input-output devices :- Request of some external data on which have no control
+      of application(like APIs,DB,Files, etc. these need to access from outside the application
+      and we don't know how much time it will take, when it will return. Application have no controls on these)
+    - CPU Intensive task 
+
+
+   > how a general system/application works
+     we are talking about the system which is created by multi-threaded language.
+     It get request from client (request may be 100s, 1000s, for these multiple request,
+     system generate 1000s of thread and these threads perform different task parallely)
+     then these request goes through the database, APIs, different cloud services and many
+     more operation happend in backend and then the system provide solution/ data to the client.
+
+     
+              request     ___________           |----> cloud service
+    client   --------->   |  system |___________|----> APIs
+     side    <---------   |_________|           |----> database
+                          / | | | | \           |----> etc
+                            threads
+
+
+
+    > how JS system works?
+      like other general system/application javascript doesn't have threads the how javascript works?
+      . for this some components are involved
+        - Event Queue - FIFO(first in first out)
+          -> it store all the request which has been recieved from client side.
+        - NodeJS
+      Main thread take request from event queue and chech whether it is I/O request or something else,
+      if it is I/O request then send it to the NodeJS, where NodeJS takes care of that task
+      (basically NodeJS assign these task to the thread of thread pool and task is done by those threads) 
+      and then NodeJS notify the system and sendback to the event queue(last position).
+      If the request is not I/O request then the task is perform by the main thread itself.
+      Js system repeat this process again and again and follow a loop like structure that is why it is called event loop.
+
+
+
+         Event queue
+       __________________                              NodeJS
+      |||||| | |R3|R2|R1 |______                ___________________
+      |__________________|      | MT            |                  |
+         requests  /|\    ______|____       ____| thread pool      |
+                    |     |   JS    |   I/O |   |__________________|
+    client   ------>|     |  system |------>|     |  / | | | | | \ 
+     side    <------------|_________|<------------|     threads
+               R                          R(I/O)
+
+
+   how it returns the value?
+   as task done by NodeJS is send first to the event queue and then other requests are sendback to the event queue .and queue follows FIFO so I/O request executed last.
+   befor   ,,, r4, r3, r2(i/o), r1
+   after   r2(i/o) ,,, r4, r3, r1 
+
+In Some cases js system runs slower than other system, what could be those cases?
+=> There are some algorithms which might take a lot of time ex. if we have to find 1Mth prime number it may takes few minutes.
+   These types of request don't need access from outside devices.So these type of task will be done by MT itself.
+   In these type of case MT will be busy to find prime number. And as we know js is single threaded where the tasts executed one by one,
+   next task won't be executed until the last task is completed, till the time other task will be waiting and waiting and waiting, which will be time consuming.
+
+
+6. Call back function :-
+   > A callback function is a function passed into another function as an argument which is then invoked inside the outer function to complete an action;
+   In async programming , we use setTimeOut which return after given time but at last when all the function gets executed which is a problem and to overcome this problem we use callback.
+      
+    function placeOrder(){
+    verfyCard();
+    deductAmount();
+    }
+    function verfyCard(){
+    setTimeout(() =>{
+        console.log("Card Verified");
+
+    },4000);
+   }
+   function deductAmount(){
+    console.log("Amount deducted");
+
+   }
+   placeOrder();
+
+   here after placing the order it must return card verified and then amount deduct but this is happening in reverse order
+   so we pass our deductAmount functionality to verfyCard and use cb (call back) functionality in verfyCard function.
+   Although verfiyCard task will be put back in queue before other function but will execute after others.
+   As shown in callback file.
+   But that is not the correct solution when we talk about any other third party
+     - No proper error handling technique.
+     - Loss of control over code(we don't know how other party will use our code)
+  ** We can use this for internal purpose.
+   To solve the problem we have an another concept that is promises. 
+
+7. PROMISES :- Solve problems with callback
+    we can only trust 3rd party if there is promises.
+    Promises is a class which takes function as a parameter and in that function we pass success/ resolve and failure/reject as parameters as functions.
+    We can call those resolve / reject function only when promise is resolved or rejected. Now from caller end we have removed passing the callback function, we are calling then function
+    And in that then function we are passing the callback , which will be executed when promises is resolved and then we call system function.
+    > it help us to regain our control of the code and also gives a sofisticated method to handle errors. 
+    > it is something like contract between 3rd party and system, it must have to send the response whether it is negative or positive.
+    > Promises can only be resolved only once not twice, so if we call the resolve / success function multiple times, js consider those as void and it has no impact on our code.
+    ** we must call promise when our application is associated with 3rd party application.
+
+    How to handle errors which are returned by promises 
+BOOKS 
+You Don't Know JS
+series to follow in following orders
+. Types & grammer
+. this & objects
+. scope & closures
+. Async & performance
+. ES6 & beyond
+. UP & Going

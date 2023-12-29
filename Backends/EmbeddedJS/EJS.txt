@@ -1,0 +1,12 @@
+Embedded JavaScript is a templating language for JavaScript, It allows au to embed JavaScript code directly within the HTML.
+It's commonly used with Node.js and Express.js for server-side rendering.
+
+
+EJS Tags
+
+<%= variable %>              JS Output
+<% console.log("hello") %>   JS Execute
+<%- <h1> Hello </h1> %>      Render HTML
+<%% %%>                      Show <% or %>
+<%# This is a comment %>     Stop Execution
+<%- include("<FILE NAME>") %> insert another EJS FILE

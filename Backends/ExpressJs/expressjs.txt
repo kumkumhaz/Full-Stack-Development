@@ -1,0 +1,56 @@
+A frame work build on top of Node
+-> a javascript framework that allows us to create backends for our websites
+-> It allows us to use javascript and node to create our website's backends,
+WHY DO WE NEED EXPRESS?
+ => we can use node to do a lot of things like creating a IOT device, desktop applications(ex:- VS code)
+    and when we have a tool or a language that allows us to do many things,
+    it is generally is not a very specialized for one thing.So wheneve somebody is going to create a websites 
+    using node then defenately he is going to use a js framework like expressjs build on top of node, Because of better readability, 
+    less code, ability to add middleware
+
+
+CREATING AN EXPRESS SERVER:-
+ 1. Create directory.
+ 2. Create index.js file.
+ 3. Initialize NPM.
+ 4. Install the express package.
+ 5. Write server application in index.js.
+ 6. Start server.
+   - command to check is local server is running in our computer or not
+    IN window => netstat -ano | findstr "LISTENING" 
+    In mac => sudo lsof -i -p -n | grep LISTEN   
+ 
+
+
+HTTP -> Hyper Text Transfer Protocol
+  HyperText = Html
+  Transfer Protocol = its like a language that allows computers to talk to each other across the Internet.
+
+  HTTP Method
+           Get -> Request server(Resource)
+               => Retrievw information from teh specified resource, and should only be used to request data(not modify it).
+           Post -> Sending Resource(ex; sending a form)
+                => Sends data to the server for processing, usually resulting in  a changein the server state or side effects on the server.
+           Put -> Replace server      -------|__> update Resource => Updates a current resource or create it if it doesn't exist, with the client providing a complete and updated copy of the resource.
+           Patch -> Patch up a Resource------|                   => Updates parts of an existing resource, with the client providingonly the parts of the resourcethat need to be updated.
+           Delete -> Resource has been deleted => Removes the specified resource from the server.
+
+ HTTP response status codes
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
+
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+MIDDLEWARE:- Something between server(client, local server) and routes(get, put, post, patch, delete), there is a handler called middleware.
+In terms of types of functionality
+   > Pre processing
+    -> The most commom pre processing middleware in node and express is "body parser"
+   > authentication
+   > Error handeling
+   > Logging request
+     -> The most commomly used Logging middleware in node and express is "morgan".
+
+  CUSTOM MIDDLEWARE 

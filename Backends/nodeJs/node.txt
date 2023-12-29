@@ -1,0 +1,14 @@
+Node is generally prefer as a js framework but this is not a framework, this is runtime environment,
+that allows us to run javascript on our local computer not just limited to within the browser.
+
+
+Native node modules / common JavaScript(CJS)
+=> ues require keyword
+
+ESM( ecma script modules)
+=> uses import keyword
+-> this basically provides a standardized way of using JavaScript to be consistent on the front end
+   and the back end.
+   It also improves things through tree shaking and a whole bunch of crazy things behind the scenes,
+
+
