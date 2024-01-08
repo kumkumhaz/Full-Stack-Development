@@ -4,3 +4,5 @@ GraphQL, SOAP, REST:API , gRPC
 
 
 We are going to learn REST:API because this is most popular among the web developers
+
+-> APIs request in postman
