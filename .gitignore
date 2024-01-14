@@ -1,5 +1,10 @@
 # Ignore notes folders
+note/
+Note/
+NOTE/
 notes/
+Notes/
+NOTES/
 
 # OS generated files
 .DS_Store
