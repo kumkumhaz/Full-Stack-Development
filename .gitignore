@@ -1,11 +1,15 @@
 # Ignore notes folders
+<<<<<<< HEAD
 
+=======
+>>>>>>> a311363dc13615f6e038350f8d32aae45d642cb5
 note/
 Note/
 NOTE/
 notes/
 Notes/
 NOTES/
+<<<<<<< HEAD
 
 
 # PDF files
@@ -14,6 +18,8 @@ NOTES/
 *.Pdf
 
 
+=======
+>>>>>>> a311363dc13615f6e038350f8d32aae45d642cb5
 
 # OS generated files
 .DS_Store
