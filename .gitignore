@@ -1,5 +1,19 @@
 # Ignore notes folders
+
+note/
+Note/
+NOTE/
 notes/
+Notes/
+NOTES/
+
+
+# PDF files
+*.pdf
+*.PDF
+*.Pdf
+
+
 
 # OS generated files
 .DS_Store
