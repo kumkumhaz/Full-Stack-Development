@@ -6,3 +6,93 @@ GraphQL, SOAP, REST:API , gRPC
 We are going to learn REST:API because this is most popular among the web developers
 
 -> APIs request in postman
+
+WHAT IS JSON?
+JSON => JsvaScript Object Notation
+
+
+//////////////////////////JsvaScript Object vs JSON\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+OBJECT
+-----------
+> properties are stored in key-value (value in the form of string) pair and seperated by a colon(:) and 
+  each properties are seperated by a comma(,).
+> Native JavaScript Data Type:
+  JavaScript objects are native to the JavaScript language. They are actual JavaScript objects residing in memory.
+> Quotes:
+  In JavaScript objects, keys do not need to be enclosed in quotes unless they are reserved words or include special characters.
+> Data Types:
+  JavaScript objects can have more diverse data types, including functions and special JavaScript objects (like Date).
+> Functions:
+  Functions can be a part of a JavaScript object.
+
+When to Use JavaScript Object:
+   When working within a JavaScript environment, especially for more complex data structures.
+   When you need to perform operations and use the features specific to JavaScript objects.
+let obj = { 
+    name: "kumkum",
+    title: "Kumari",
+    city: "Hazaribagh",
+    education: [
+        {
+            degree: "Mtech",
+            branch: "IPE"
+        },
+        {
+            degree: "Btech",
+            branch: "Mechanical"
+        }
+    ],
+    hobby:{
+        coding: "web development",
+        specialization: "front-end development"
+    } 
+}
+
+
+JSON
+---------
+> it is also stores properties in the form of key-value pair but both the value key and vlaue are in the form of string
+  i.e. it uses double quotes("").
+> Key and value are seperated by a colon(:) and each properties are separatedby a comma(,) as like in the Object
+> String Format:
+    JSON is a string-based data interchange format. It is essentially a text format that is completely language-independent.
+    JSON data is represented as a string and is often used for data exchange between a server and a web application.
+> Quotes:
+    JSON keys and string values must be enclosed in double quotes.
+> Data Types:
+    Limited data types are supported in JSON: strings, numbers, objects, arrays, booleans, and null.
+> Functions:
+    JSON cannot represent functions. If a JavaScript object contains a function, it cannot be directly converted to JSON.
+
+When to Use Each JSON:
+    When you need to exchange data between a server and a client (e.g., AJAX requests).
+    When you're working with data from different programming languages or platforms.
+{
+  "name": "kumkum",
+  "title": "Kumari",
+  "city": "Hazaribagh",
+  "education": [
+    {
+      "degree": "Mtech",
+      "branch": "IPE"
+    },
+    {
+      "degree": "Btech",
+      "branch": "Mechanical"
+    }
+  ],
+  "hobby": {
+    "coding": "web development",
+    "specialization": "front-end development"
+  }
+}
+
+ JS OBJECT => JSON
+
+const jsonData = JSON.stringify(data);
+                                 |-->JS Object
+
+JSON => js Object
+const data = JSON.parse(jsonData);
+                          |--->json data
