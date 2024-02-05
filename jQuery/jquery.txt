@@ -1,3 +1,15 @@
 //////////////............ JQUERY............/////////////
 
 - A javaScript library
+How to incorporate JQUERY in our page 
+- by downloading the jQuery from jQuery.com 
+- by using google CDNs (always put CDN link above the script tag)
+
+CDNs?
+=> CDN (Content Delivery Network): A CDN is a network of distributed servers that work together to deliver web content,
+   like images, stylesheets, and scripts, to users based on their geographical location. CDNs aim to reduce latency and 
+   enhance website performance by serving content from servers closer to the user, resulting in faster load times and improved user experience. 
+   Popular CDN providers include Cloudflare, Akamai, and Amazon CloudFront.
+
+MINIFY
+ MINIFY refers to the reducing the size of js / css code file . It can be done using minifier.org

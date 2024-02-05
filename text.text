@@ -13,10 +13,14 @@
 
 LIBRARY vs FRAMEWORK
 
-1.FRAMEWORK:-
-             a web framework provides pre-built components and structures that can be used to build
-             an application without the need for us to write every single line of code from scratch.      
- ex:- NodeJS(run time environment), ReachJs, jQuery, ExpressJS
+1.FRAMEWORK:-A framework is a structured environment that guides software development with predefined rules.
+       Ex: Express.js for (Node.js)
+
+2. LIBRARY:- 
+Library:- A library is a collection of pre-written code that provides specific functionalities, simplifying tasks. 
+       Ex: jQuery for DOM manipulation.
+           ReactJS ( component-based front-end JS library)
+           
   Why use Frameworks and libraries?
    => 
 

@@ -1,4 +1,5 @@
 API => Application programming interface
+=> the technology that powers communication between software on the Internet.
 
 GraphQL, SOAP, REST:API , gRPC
 
@@ -96,3 +97,27 @@ const jsonData = JSON.stringify(data);
 JSON => js Object
 const data = JSON.parse(jsonData);
                           |--->json data
+
+
+
+                          
+ APIs Authentication
+ 0. No Authentication
+ 1. Basic Authentication
+    => need to provide username and password
+ 2. API key Authorisation
+ 3. Token Based Authentication    
+
+
+Authentication Vs autherization
+ Authentication -  is about verifying identity.
+ => Authentication ia  process of verifying the identity of a user, process or a system
+        It ensures that the entities accessing a system or resource are who they claim to be.
+        When you log in to a website by entering your username and password, you are undergoing the authentication process.
+        
+Authorisation - is about granting or denying access based on that verified identity.
+=>  Authorization is the process of granting or denying access to a user or a system based on their authenticated identity and their level of permissions.
+        It determines what actions or resources an authenticated entity is allowed to access.
+        After you log in (authentication), authorization determines whether you, as a user, have the permission to view certain pages, edit content, or perform other actions.
+
+.........REST API.........

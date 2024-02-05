@@ -1,11 +1,15 @@
+..................NODEJS .......................
+  An asynchronous event-driven javascript runtime , node.js is designed to build scalable network application.
 Node is generally prefer as a js framework but this is not a framework, this is runtime environment,
 that allows us to run javascript on our local computer not just limited to within the browser.
-
+- Initially js was designed to run on browser, this means it was impossible to use javascript to write any kind of program that is not a website.
+  but because of nodejs now it is possible to run js code on local computer  i.e. server side.
+- Node uses V8 engine which is written in C and C++, it powers the chrome browser
 
 Native node modules / common JavaScript(CJS)
-=> ues require keyword
+=> uses "require" keyword
 
-ESM( ecma script modules)
+ESM( ECMAscript modules)
 => uses import keyword
 -> this basically provides a standardized way of using JavaScript to be consistent on the front end
    and the back end.

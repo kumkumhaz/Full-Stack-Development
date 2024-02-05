@@ -1,12 +1,29 @@
+//jquery("h1") or $("h1")
+
+
+
+// in order to use cdn link above the link tag then in that case
+// use $(document).ready(function({
+//   $("h1").css("color","red");
+// }))
+
+
 $("h1").css("color","red");
 $("h1").text("Bye");
 $("h1").css("font-size" , "5rem");
 
+
+//adding or removing one class
 $("button").addClass("big-title")
-$("button").html("hello");
-$("button").text("<em>hello<em>");
+//$("button").removeClass("big-title")
+
+
+//adding or removing multiple clss
+$("button").addClass("big-title margin-50")
+
+//$("button").html("hello");
+//$("button").text("<em>hello<em>");
 $("button").html("<em>hello<em>");
-// $("button").text("yes");
 // $("button").text("yes");
  $("a").attr("href", "https://www.amazon.com");
 
@@ -23,9 +40,9 @@ $("button").html("<em>hello<em>");
 //  $("button").click(function(){
 //     $("h1").css("color","purple");
 //  })
-//  $("input").keypress(function(event){
-//     $("h1").text(event.key);
-//  })
+ $("input").keypress(function(event){
+    $("h1").text(event.key);
+ })
 
 //  $("h1").on("mouseover",function(){
 //     $("h1").css("color","green");
