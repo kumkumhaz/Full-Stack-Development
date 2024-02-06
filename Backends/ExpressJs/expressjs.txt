@@ -4,7 +4,7 @@ A frame work build on top of Node
 WHY DO WE NEED EXPRESS?
  => we can use node to do a lot of things like creating a IOT device, desktop applications(ex:- VS code)
     and when we have a tool or a language that allows us to do many things,
-    it is generally is not a very specialized for one thing.So wheneve somebody is going to create a websites 
+    it is generally is not a very specialized for one thing.So whenever somebody is going to create a websites 
     using node then defenately he is going to use a js framework like expressjs build on top of node, Because of better readability, 
     less code, ability to add middleware
 
@@ -27,22 +27,22 @@ HTTP -> Hyper Text Transfer Protocol
   Transfer Protocol = its like a language that allows computers to talk to each other across the Internet.
 
   HTTP Method
-           Get -> Request server(Resource)
-               => Retrievw information from teh specified resource, and should only be used to request data(not modify it).
-           Post -> Sending Resource(ex; sending a form)
+           Get -> Request server(Resource , it could be a Html website ,text, some piece of data from database)
+               => Retrieve information from the specified resource, and should only be used to request data(not modify it).
+           Post -> Sending Resource to the server(a piece of information, ex; sending a form)
                 => Sends data to the server for processing, usually resulting in  a changein the server state or side effects on the server.
-           Put -> Replace server      -------|__> update Resource => Updates a current resource or create it if it doesn't exist, with the client providing a complete and updated copy of the resource.
-           Patch -> Patch up a Resource------|                   => Updates parts of an existing resource, with the client providingonly the parts of the resourcethat need to be updated.
+           Put -> Replace server      -------|---> update Resource => Updates a current resource entirly or create it if it doesn't exist, with the client providing a complete and updated copy of the resource.
+           Patch -> Patch up a Resource------|                     => Updates parts of an existing resource, with the client providingonly the parts of the resourcethat need to be updated.
            Delete -> Resource has been deleted => Removes the specified resource from the server.
 
  HTTP response status codes
 HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
 
-Informational responses (100 – 199)
-Successful responses (200 – 299)
-Redirection messages (300 – 399)
-Client error responses (400 – 499)
-Server error responses (500 – 599)
+Informational responses (100 – 199) - Hold on
+Successful responses (200 – 299) - Here you go
+Redirection messages (300 – 399) - go away
+Client error responses (400 – 499) - you fucked up
+Server error responses (500 – 599) - i fucked up
 
 MIDDLEWARE:- Something between server(client, local server) and routes(get, put, post, patch, delete), there is a handler called middleware.
 In terms of types of functionality

@@ -7,7 +7,7 @@
 
 import inquirer from 'inquirer';
 import qr from "qr-image";
-import fs, { writeFile } from "fs";
+import fs from "fs";
 inquirer
   .prompt([
     /* Pass your questions in here */
